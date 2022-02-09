@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using NUnit.Framework;
 
 #pragma warning disable CA1707
@@ -67,7 +67,7 @@ namespace NumeralSystems.Tests
         [TestCase(-60)]
         public void GetPositiveRadix_NumberIsLessThanZero_ThrowArgumentException(int number) =>
             Assert.Throws<ArgumentException>(() => number.GetPositiveRadix(8), $"{nameof(number)} can not be less than zero.");
-        
+
         [TestCase(int.MinValue)]
         [TestCase(-60)]
         public void GetPositiveOctal_NumberIsLessThanZero_ThrowArgumentException(int number) =>
